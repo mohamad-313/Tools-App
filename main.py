@@ -762,30 +762,16 @@ while a < 1:
             p = 0
             try:
                 while p < 1:
-                    computerMove = random.randint(1,3)
-                    if computerMove == 1:
-                        computerMove = "rock"
-                    elif computerMove == 2:
-                        computerMove = "paper"
-                    elif computerMove == 3:
-                        computerMove = "scissor"
+                    move = ["rock","paper","scissors"]
+                    computerMove = random.choices(move)
                     d = 0
                     while d < 1:
                         print(termcolor2.colored("\n[1] Rock\n[2] Scissor\n[3] Paper\n[0] Back","magenta"))
                         playerMove1 = input(">>> Choose: ")
-                        if playerMove1 == "1":
-                            playerMove = "rock".lower()
-                            d += 1
-                        elif playerMove1 == "2":
-                            playerMove = "scissor".lower()
-                            d += 1
-                        elif playerMove1 == "3":
-                            playerMove = "paper".lower()
-                            d += 1
-                        elif playerMove1 == "0":
-                            playerMove = "0"
-                            d += 1
-                        else:
+                        player_move = {0 : 0, 1 : 'rock', 2: "scissor", 3 : "paper"}
+                        try:
+                            playerMove = player_move[playerMove1]
+                        except err:
                             print(termcolor2.colored("ٍError!","red","on_white",attrs=["bold"]))
                             print(termcolor2.colored("==========================\n","red","on_white"))
                             
