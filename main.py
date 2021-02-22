@@ -1,29 +1,31 @@
 import pyfiglet
-import termcolor2
+from termcolor2 import colored
 
 # ============= functions =============
 
 # ============= labels =============
 
 name = pyfiglet.figlet_format("Tool App")
-print(termcolor2.colored(name,"red"))
+print(colored(name,"red"))
 
 by = "By: Mohammad Shokouhian"
-print(termcolor2.colored(by,"green",attrs=["bold","underline"]))
+print(colored(by,"green",attrs=["bold","underline"]))
 
 # ============= if =============
 
 a = 0
 while a < 1:
-    print(termcolor2.colored("\n[1] Caculator","magenta"))
-    print(termcolor2.colored("[2] Time tool","magenta"))
-    print(termcolor2.colored("[3] Wikipedia Search","magenta"))
-    print(termcolor2.colored("[4] Rock-Scissor-Paper","magenta"))
-    print(termcolor2.colored("[5] Guess Number","magenta"))
-    print(termcolor2.colored("[6] Text to Speech","magenta"))
-    print(termcolor2.colored("[7] Shut down","magenta"))
-    print(termcolor2.colored("[8] Backgroud Changer","magenta"))
-    print(termcolor2.colored("[0] Quit\n","magenta"))
+    print(colored("
+[1] Caculator","magenta"))
+    print(colored("[2] Time tool","magenta"))
+    print(colored("[3] Wikipedia Search","magenta"))
+    print(colored("[4] Rock-Scissor-Paper","magenta"))
+    print(colored("[5] Guess Number","magenta"))
+    print(colored("[6] Text to Speech","magenta"))
+    print(colored("[7] Shut down","magenta"))
+    print(colored("[8] Backgroud Changer","magenta"))
+    print(colored("[0] Quit
+","magenta"))
     firstQ = input(">>> What would you like to do: ")
     
     if firstQ == "1":
@@ -31,65 +33,69 @@ while a < 1:
         # ============= functions(calculator) =============
         def plus(x,y):
             result = x + y
-            res = termcolor2.colored(result,"red")
+            res = colored(result,"red")
             print(f"{x} + {y} = {res}")
             
         def minus(x,y):
             result = x - y
-            res = termcolor2.colored(result,"red")
+            res = colored(result,"red")
             print(f"{x} - {y} = {res}")
 
         def multy(x,y):
             result = x * y
-            res = termcolor2.colored(result,"red")
+            res = colored(result,"red")
             print(f"{x} × {y} =  {res}")
 
         def dev(x,y):
             result = x / y
-            res = termcolor2.colored(result,"red")
+            res = colored(result,"red")
             print(f"{x} ÷ {y} = {res}")
 
         def sqrtfunc(x):
             result = math.sqrt(x)
-            res = termcolor2.colored(result,"red")
+            res = colored(result,"red")
             print(f"Result is: {res}")
 
         def tavan(x,y):
             result = x ** y
-            res = termcolor2.colored(result,"red")
+            res = colored(result,"red")
             print(f"{x} ^ {y} = {res}")
 
         def tangent(x):
             result = math.tan(x)
-            res = termcolor2.colored(result,"red")
+            res = colored(result,"red")
             print(f"tangent of {x} = {res}")
 
         # ============= run func =============
 
         def runcalc():
-            termcolor2.colored("\n\nCalculator","yellow")
+            colored("
+
+Calculator","yellow")
             a = 0
             while a < 1:
                 try:
-                    OneTwo = "\n[1] + \t [2] -"
-                    print(termcolor2.colored(OneTwo,"magenta"))
-                    ThreeFour = "[3] × \t [4] ÷"
-                    print(termcolor2.colored(ThreeFour,"magenta"))
+                    OneTwo = "
+[1] + 	 [2] -"
+                    print(colored(OneTwo,"magenta"))
+                    ThreeFour = "[3] × 	 [4] ÷"
+                    print(colored(ThreeFour,"magenta"))
                     five = "[5] sqrt"
-                    print(termcolor2.colored(five,"magenta"))
+                    print(colored(five,"magenta"))
                     six = "[6] forse"
-                    print(termcolor2.colored(six,"magenta"))
+                    print(colored(six,"magenta"))
                     seven = "[7] factorial"
-                    print(termcolor2.colored(seven,"magenta"))
+                    print(colored(seven,"magenta"))
                     eight = ("[8] tangent")
-                    print(termcolor2.colored(eight,"magenta"))
+                    print(colored(eight,"magenta"))
                     tryAgain = "Try again!"
                     zero = "[0] Quit!"
-                    print(termcolor2.colored(zero,"magenta"))
+                    print(colored(zero,"magenta"))
 
                     z = 0
                     while z < 1:
-                        solve = input("\n>>> What do you want to do? ")
+                        solve = input("
+>>> What do you want to do? ")
                         if solve == "1":
                             first_num = int(input(">>> first number: "))
                             second_num = int(input(">>> second number: "))
@@ -143,10 +149,10 @@ while a < 1:
                             z += 1
                             a += 1
                         else:
-                            print(termcolor2.colored(tryAgain,"red","on_white",attrs=["bold"]))
+                            print(colored(tryAgain,"red","on_white",attrs=["bold"]))
                     z -= 1
                 except:
-                    print(termcolor2.colored("ٍError!","red","on_white",attrs=["bold"]))
+                    print(colored("ٍError!","red","on_white",attrs=["bold"]))
             a -= 1
         runcalc()
     elif firstQ == "2":
@@ -155,7 +161,10 @@ while a < 1:
         import datetime as dt
         # import termcolor2
 
-        print(termcolor2.colored("\nTime Tool\n\n","yellow"))
+        print(colored("
+Time Tool
+
+","yellow"))
 
         # ============= variables =============
 
@@ -174,86 +183,113 @@ while a < 1:
         def animalshamsi(year):
             trueYear = year - 7
             if trueYear % 12 == 0:
-                print(termcolor2.colored("your birth year is : <Mouse>","green"))
-                print(termcolor2.colored("================\n","red"))
+                print(colored("your birth year is : <Mouse>","green"))
+                print(colored("================
+","red"))
             elif trueYear % 12 == 1:
-                print(termcolor2.colored("your birth year is : <Cow>","green"))
-                print(termcolor2.colored("================\n","red"))
+                print(colored("your birth year is : <Cow>","green"))
+                print(colored("================
+","red"))
             elif trueYear % 12 == 2:
-                print(termcolor2.colored("your birth year is : <Tiger>","green"))
-                print(termcolor2.colored("================\n","red"))
+                print(colored("your birth year is : <Tiger>","green"))
+                print(colored("================
+","red"))
             elif trueYear % 12 == 3:
-                print(termcolor2.colored("your birth year is : <Rabbit>","green"))
-                print(termcolor2.colored("================\n","red"))
+                print(colored("your birth year is : <Rabbit>","green"))
+                print(colored("================
+","red"))
             elif trueYear % 12 == 4:
-                print(termcolor2.colored("your birth year is : <Dragon>","green"))
-                print(termcolor2.colored("================\n","red"))
+                print(colored("your birth year is : <Dragon>","green"))
+                print(colored("================
+","red"))
             elif trueYear % 12 == 5:
-                print(termcolor2.colored("your birth year is : <Snake>","green"))
-                print(termcolor2.colored("================\n","red"))
+                print(colored("your birth year is : <Snake>","green"))
+                print(colored("================
+","red"))
             elif trueYear % 12 == 6:
-                print(termcolor2.colored("your birth year is : <Houre>","green"))
-                print(termcolor2.colored("================\n","red"))
+                print(colored("your birth year is : <Houre>","green"))
+                print(colored("================
+","red"))
             elif trueYear % 12 == 7:
-                print(termcolor2.colored("your birth year is : <Goat>","green"))
-                print(termcolor2.colored("================\n","red"))
+                print(colored("your birth year is : <Goat>","green"))
+                print(colored("================
+","red"))
             elif trueYear % 12 == 8:
-                print(termcolor2.colored("your birth year is : <Monkey>","green"))
-                print(termcolor2.colored("================\n","red"))
+                print(colored("your birth year is : <Monkey>","green"))
+                print(colored("================
+","red"))
             elif trueYear % 12 == 9:
-                print(termcolor2.colored("your birth year is : <Rooster>","green"))
-                print(termcolor2.colored("================\n","red"))
+                print(colored("your birth year is : <Rooster>","green"))
+                print(colored("================
+","red"))
             elif trueYear % 12 == 10:
-                print(termcolor2.colored("your birth year is : <Dog>","green"))
-                print(termcolor2.colored("================\n","red"))
+                print(colored("your birth year is : <Dog>","green"))
+                print(colored("================
+","red"))
             elif trueYear % 12 == 11:
-                print(termcolor2.colored("your birth year is : <Pig>","green"))
-                print(termcolor2.colored("================\n","red"))
+                print(colored("your birth year is : <Pig>","green"))
+                print(colored("================
+","red"))
 
         def animalmiladi(year):
             trueYear = year - 4
             if trueYear % 12 == 0:
-                print(termcolor2.colored("your birth year is : <Mouse>","green"))
-                print(termcolor2.colored("================\n","red"))
+                print(colored("your birth year is : <Mouse>","green"))
+                print(colored("================
+","red"))
             elif trueYear % 12 == 1:
-                print(termcolor2.colored("your birth year is : <Cow>","green"))
-                print(termcolor2.colored("================\n","red"))
+                print(colored("your birth year is : <Cow>","green"))
+                print(colored("================
+","red"))
             elif trueYear % 12 == 2:
-                print(termcolor2.colored("your birth year is : <Tiger>","green"))
-                print(termcolor2.colored("================\n","red"))
+                print(colored("your birth year is : <Tiger>","green"))
+                print(colored("================
+","red"))
             elif trueYear % 12 == 3:
-                print(termcolor2.colored("your birth year is : <Rabbit>","green"))
-                print(termcolor2.colored("================\n","red"))
+                print(colored("your birth year is : <Rabbit>","green"))
+                print(colored("================
+","red"))
             elif trueYear % 12 == 4:
-                print(termcolor2.colored("your birth year is : <Dragon>","green"))
-                print(termcolor2.colored("================\n","red"))
+                print(colored("your birth year is : <Dragon>","green"))
+                print(colored("================
+","red"))
             elif trueYear % 12 == 5:
-                print(termcolor2.colored("your birth year is : <Snake>","green"))
-                print(termcolor2.colored("================\n","red"))
+                print(colored("your birth year is : <Snake>","green"))
+                print(colored("================
+","red"))
             elif trueYear % 12 == 6:
-                print(termcolor2.colored("your birth year is : <Houre>","green"))
-                print(termcolor2.colored("================\n","red"))
+                print(colored("your birth year is : <Houre>","green"))
+                print(colored("================
+","red"))
             elif trueYear % 12 == 7:
-                print(termcolor2.colored("your birth year is : <Goat>","green"))
-                print(termcolor2.colored("================\n","red"))
+                print(colored("your birth year is : <Goat>","green"))
+                print(colored("================
+","red"))
             elif trueYear % 12 == 8:
-                print(termcolor2.colored("your birth year is : <Monkey>","green"))
-                print(termcolor2.colored("================\n","red"))
+                print(colored("your birth year is : <Monkey>","green"))
+                print(colored("================
+","red"))
             elif trueYear % 12 == 9:
-                print(termcolor2.colored("your birth year is : <Rooster>","green"))
-                print(termcolor2.colored("================\n","red"))
+                print(colored("your birth year is : <Rooster>","green"))
+                print(colored("================
+","red"))
             elif trueYear % 12 == 10:
-                print(termcolor2.colored("your birth year is : <Dog>","green"))
-                print(termcolor2.colored("================\n","red"))
+                print(colored("your birth year is : <Dog>","green"))
+                print(colored("================
+","red"))
             elif trueYear % 12 == 11:
-                print(termcolor2.colored("your birth year is : <Pig>","green"))
-                print(termcolor2.colored("================\n","red"))
+                print(colored("your birth year is : <Pig>","green"))
+                print(colored("================
+","red"))
 
         def todayMiladifunc():
-            print(termcolor2.colored("\nGregorian date:","yellow"))
-            print(termcolor2.colored(f"{year}/{month}/{day}","green"))
-            print(termcolor2.colored(f"\n{hour} : {minute} : {second}","blue"))
-            print(termcolor2.colored(f"{dayOfYear} days from {year}\n","green"))
+            print(colored("
+Gregorian date:","yellow"))
+            print(colored(f"{year}/{month}/{day}","green"))
+            print(colored(f"
+{hour} : {minute} : {second}","blue"))
+            print(colored(f"{dayOfYear} days from {year}
+","green"))
 
         def gLeapYear(y):
             if (y%4==0) and ((y%100!=0) or (y%400==0)):
@@ -313,23 +349,31 @@ while a < 1:
                     sm = int(gd/30) + 10 
             # result = [sy, sm, sd]
             # return result
-            print(termcolor2.colored("\ntoday is:","yellow"))
+            print(colored("
+today is:","yellow"))
             if dayOfWeek == 0:
-                print(termcolor2.colored("Monday\n","blue"))
+                print(colored("Monday
+","blue"))
             elif dayOfWeek == 1:
-                print(termcolor2.colored("Tuesday\n","blue"))
+                print(colored("Tuesday
+","blue"))
             elif dayOfWeek == 2:
-                print(termcolor2.colored("Wednesday\n","blue"))
+                print(colored("Wednesday
+","blue"))
             elif dayOfWeek == 3:
-                print(termcolor2.colored("Thursday\n","blue"))
+                print(colored("Thursday
+","blue"))
             elif dayOfWeek == 4:
-                print(termcolor2.colored("Friday\n","blue"))
+                print(colored("Friday
+","blue"))
             elif dayOfWeek == 5:
-                print(termcolor2.colored("Saturday\n","blue"))
+                print(colored("Saturday
+","blue"))
             elif dayOfWeek == 6:
-                print(termcolor2.colored("Sunday\n","blue"))
-            print(termcolor2.colored("Shamsi date:","yellow"))
-            print(termcolor2.colored(f"{sd}/{sm}/{sy}","green"))
+                print(colored("Sunday
+","blue"))
+            print(colored("Shamsi date:","yellow"))
+            print(colored(f"{sd}/{sm}/{sy}","green"))
 
         def miladiToShamsi(gyear, gmonth, gday):
             _gl = [0, 31, 60, 91, 121, 152, 182, 213, 244, 274, 305, 335]
@@ -375,7 +419,10 @@ while a < 1:
                     sm = int(gd/30) + 10 
             # result = [sy, sm, sd]
             # return result
-            print(termcolor2.colored(f"\nResult: \n{sd}/{sm}/{sy}\n","green"))
+            print(colored(f"
+Result: 
+{sd}/{sm}/{sy}
+","green"))
 
         def shamsiToMiladi(gyear, gmonth, gday):
             gregorian_date_obj = JalaliToGregorian(gyear,gmonth,gday)
@@ -383,13 +430,16 @@ while a < 1:
             d = gregorian_date[0]
             m = gregorian_date[1]
             y = gregorian_date[2]
-            print(termcolor2.colored("\nResult:","green"))
-            print(termcolor2.colored(f"{d}/{m}/{y}","green"))
-            print(termcolor2.colored("==============\n","red"))
+            print(colored("
+Result:","green"))
+            print(colored(f"{d}/{m}/{y}","green"))
+            print(colored("==============
+","red"))
 
 
         def daysOfLifeMiladi():
-            year2 = int(input("\nYear of birth: "))
+            year2 = int(input("
+Year of birth: "))
             month2 = int(input("Month of birth: "))
             day2 = int(input("Day of birth: "))
             year_born =  dt.date(year2,month2,day2)
@@ -399,7 +449,9 @@ while a < 1:
             if days_life <= 0:
                 print('You were not born on this date.')
             else:
-                print(termcolor2.colored('\nIt\'s been {} days from birthday!\n'.format(days_life),"green"))
+                print(colored('
+It's been {} days from birthday!
+'.format(days_life),"green"))
 
         def daysOfLifeShamsi(gyear,gmonth,gday):
             _gl = [0, 31, 60, 91, 121, 152, 182, 213, 244, 274, 305, 335]
@@ -443,7 +495,8 @@ while a < 1:
                 else:
                     sd = gmod
                     sm = int(gd/30) + 10
-            year2 = int(input("\nYear of birth: "))
+            year2 = int(input("
+Year of birth: "))
             month2 = int(input("Month of birth: "))
             day2 = int(input("Day of birth: "))
             year_born =  dt.date(year2,month2,day2)
@@ -453,30 +506,34 @@ while a < 1:
             if days_life <= 0:
                 print('You were not born on this date.')
             else:
-                print(termcolor2.colored('\nIt\'s been {} days from birthday!'.format(days_life),"green"))
-                print(termcolor2.colored("==============\n","red"))
+                print(colored('
+It's been {} days from birthday!'.format(days_life),"green"))
+                print(colored("==============
+","red"))
 
         # ============= inputs and texts(time) =============
 
-        print(termcolor2.colored("[1] Animal of birth (Miladi)","magenta"))
-        print(termcolor2.colored("[2] Animal of birth (Shamsi)","magenta"))
-        print(termcolor2.colored("[3] Today","magenta"))
-        print(termcolor2.colored("[4] Miladi to Shamsi","magenta"))
-        print(termcolor2.colored("[5] Shamsi to Miladi","magenta"))
-        print(termcolor2.colored("[6] Days of life (Miladi)","magenta"))
-        print(termcolor2.colored("[7] Days of life (Shamsi)","magenta"))
+        print(colored("[1] Animal of birth (Miladi)","magenta"))
+        print(colored("[2] Animal of birth (Shamsi)","magenta"))
+        print(colored("[3] Today","magenta"))
+        print(colored("[4] Miladi to Shamsi","magenta"))
+        print(colored("[5] Shamsi to Miladi","magenta"))
+        print(colored("[6] Days of life (Miladi)","magenta"))
+        print(colored("[7] Days of life (Shamsi)","magenta"))
         work = input(">>> what do you want to do? ")
 
         # ============= if(time) =============
 
         if work == "1":
             try:
-                animalmiladi(int(input("\n>>> Enter your year of birth: ")))
+                animalmiladi(int(input("
+>>> Enter your year of birth: ")))
             except:
                 print("Error!")
         elif work == "2":
             try:
-                animalshamsi(int(input("\n>>> Enter your year of birth: ")))
+                animalshamsi(int(input("
+>>> Enter your year of birth: ")))
             except:
                 print("Error!")
         elif work == "3":
@@ -487,7 +544,8 @@ while a < 1:
                 print("Error!")
         elif work == "4":
             try:
-                y1 = int(input("\n>>> year: "))
+                y1 = int(input("
+>>> year: "))
                 m1 = int(input(">>> month: "))
                 d1 = int(input(">>> day: "))
                 miladiToShamsi(y1,m1,d1)
@@ -495,7 +553,8 @@ while a < 1:
                 print("Error!")
         elif work == "5":
             try:
-                y2 = int(input("\n>>> year: "))
+                y2 = int(input("
+>>> year: "))
                 m2 = int(input(">>> month: "))
                 d2 = int(input(">>> day: "))
                 shamsiToMiladi(y2,m2,d2)
@@ -516,7 +575,8 @@ while a < 1:
     elif firstQ == "3":
         import wikipedia
 
-        print(termcolor2.colored("\nWikipedia","yellow"))
+        print(colored("
+Wikipedia","yellow"))
 
         # ============= functions =============
         def searchEn():
@@ -618,18 +678,26 @@ while a < 1:
 
         # ============== first input ==============
 
-        print(termcolor2.colored("\n\nRock Scissor Paper","yellow"))
-        OneTwo = "\n[1] Computer \n[2] Player 2\n"
-        print(termcolor2.colored(OneTwo,"magenta"))
+        print(colored("
+
+Rock Scissor Paper","yellow"))
+        OneTwo = "
+[1] Computer 
+[2] Player 2
+"
+        print(colored(OneTwo,"magenta"))
         b = 0
         try:
             while b < 1:
                 first_input = input(">>> Choose your player rival: ") 
                 if first_input == "2":
-                    print(termcolor2.colored("\n2 Player","yellow"))
+                    print(colored("
+2 Player","yellow"))
 
-                    player_name1 = input("\n>>> Player1! What is your name? ")
-                    player_name2 = input("\n>>> Player2! What is your name? ")
+                    player_name1 = input("
+>>> Player1! What is your name? ")
+                    player_name2 = input("
+>>> Player2! What is your name? ")
                     playerScore1 = 0
                     playerScore2 = 0
 
@@ -638,124 +706,148 @@ while a < 1:
                         while e < 1:
                             c = 0
                             while c < 1:
-                                print(termcolor2.colored("\n[1] Rock\n[2] Scissor\n[3] Paper\n[0] Back","magenta"))
+                                print(colored("
+[1] Rock
+[2] Scissor
+[3] Paper
+[0] Back","magenta"))
                                 playerMove1 = input(f">>> {player_name1}! Choose: ")
                                 if playerMove1 == "1":
                                     playerMove1 = "rock".lower()
                                     c += 1
-                                    print(termcolor2.colored("==========\n","red","on_white"))
+                                    print(colored("==========
+","red","on_white"))
                                 elif playerMove1 == "2":
                                     playerMove1 = "scissor".lower()
                                     c += 1
-                                    print(termcolor2.colored("==========\n","red","on_white"))
+                                    print(colored("==========
+","red","on_white"))
                                 elif playerMove1 == "3":
                                     playerMove1 = "paper".lower()
                                     c += 1
-                                    print(termcolor2.colored("==========\n","red","on_white"))
+                                    print(colored("==========
+","red","on_white"))
                                 elif playerMove1 == "0":
                                     playerMove1 = "0"
                                     c += 1
                                     e += 1
                                 else:
-                                        print(termcolor2.colored("ٍError!","red","on_white",attrs=["bold"]))
-                                        print(termcolor2.colored("==========================\n","red","on_white"))
+                                        print(colored("ٍError!","red","on_white",attrs=["bold"]))
+                                        print(colored("==========================
+","red","on_white"))
                             f = 0
                             while f < 1:
-                                print(termcolor2.colored("\n[1] Rock\n[2] Scissor\n[3] Paper\n[0] Back","magenta"))
+                                print(colored("
+[1] Rock
+[2] Scissor
+[3] Paper
+[0] Back","magenta"))
                                 playerMove2 = input(f">>> {player_name2}! Choose: ")
                                 if playerMove2 == "1":
                                     playerMove2 = "rock".lower()
                                     f += 1
-                                    print(termcolor2.colored("==========\n","red","on_white"))
+                                    print(colored("==========
+","red","on_white"))
                                 elif playerMove2 == "2":
                                     playerMove2 = "scissor".lower()
                                     f += 1
-                                    print(termcolor2.colored("==========\n","red","on_white"))
+                                    print(colored("==========
+","red","on_white"))
                                 elif playerMove2 == "3":
                                     playerMove2 = "paper".lower()
                                     f += 1
-                                    print(termcolor2.colored("==========\n","red","on_white"))
+                                    print(colored("==========
+","red","on_white"))
                                 elif playerMove2 == "0":
                                     playerMove2 = "0"
                                     f += 1
                                     e += 1
                                 else:
-                                    print(termcolor2.colored("ٍError!","red","on_white",attrs=["bold"]))
-                                    print(termcolor2.colored("==========================\n","red","on_white"))
+                                    print(colored("ٍError!","red","on_white",attrs=["bold"]))
+                                    print(colored("==========================
+","red","on_white"))
                             if playerMove1 == playerMove2:
-                                print(termcolor2.colored("Draw!","green"))
-                                print(termcolor2.colored("===========","red"))
-                                print(termcolor2.colored(f"{player_name1}: {playerScore1}","yellow"))
-                                print(termcolor2.colored(f"{player_name2}: {playerScore2}","yellow"))
-                                print(termcolor2.colored("==========================\n","red","on_white"))
+                                print(colored("Draw!","green"))
+                                print(colored("===========","red"))
+                                print(colored(f"{player_name1}: {playerScore1}","yellow"))
+                                print(colored(f"{player_name2}: {playerScore2}","yellow"))
+                                print(colored("==========================
+","red","on_white"))
                                 c -= 1
                                 f -= 1
                             elif playerMove1 == "rock":
                                 if playerMove2 == "scissor":
-                                    print(termcolor2.colored(f"Winner: {player_name1}","green"))
+                                    print(colored(f"Winner: {player_name1}","green"))
                                     playerScore1 += 1
-                                    print(termcolor2.colored(f"===========","red"))
-                                    print(termcolor2.colored(f"{player_name1}: {playerScore1}","yellow"))
-                                    print(termcolor2.colored(f"{player_name2}: {playerScore2}","yellow"))
-                                    print(termcolor2.colored("==========================\n","red","on_white"))
+                                    print(colored(f"===========","red"))
+                                    print(colored(f"{player_name1}: {playerScore1}","yellow"))
+                                    print(colored(f"{player_name2}: {playerScore2}","yellow"))
+                                    print(colored("==========================
+","red","on_white"))
                                     
                                 elif playerMove2 == "paper":
-                                    print(termcolor2.colored(f"Winner: {player_name2}","green"))
+                                    print(colored(f"Winner: {player_name2}","green"))
                                     playerScore2 += 1
-                                    print(termcolor2.colored(f"===========","red"))
-                                    print(termcolor2.colored(f"{player_name1}: {playerScore1}","yellow"))
-                                    print(termcolor2.colored(f"{player_name2}: {playerScore2}","yellow"))
-                                    print(termcolor2.colored("==========================\n","red","on_white"))
+                                    print(colored(f"===========","red"))
+                                    print(colored(f"{player_name1}: {playerScore1}","yellow"))
+                                    print(colored(f"{player_name2}: {playerScore2}","yellow"))
+                                    print(colored("==========================
+","red","on_white"))
                                 c -= 1
                                 f -= 1    
                             elif playerMove1 == "scissor":
                                 if playerMove2 == "paper":
-                                    print(termcolor2.colored(f"Winner: {player_name1}","green"))
+                                    print(colored(f"Winner: {player_name1}","green"))
                                     playerScore1 += 1
-                                    print(termcolor2.colored("===========","red"))
-                                    print(termcolor2.colored(f"{player_name1}: {playerScore1}","yellow"))
-                                    print(termcolor2.colored(f"{player_name2}: {playerScore2}","yellow"))
-                                    print(termcolor2.colored("==========================\n","red","on_white"))
+                                    print(colored("===========","red"))
+                                    print(colored(f"{player_name1}: {playerScore1}","yellow"))
+                                    print(colored(f"{player_name2}: {playerScore2}","yellow"))
+                                    print(colored("==========================
+","red","on_white"))
                     
                                 elif playerMove2 == "rock":
-                                    print(termcolor2.colored(f"Winner: {player_name2}","green"))
+                                    print(colored(f"Winner: {player_name2}","green"))
                                     playerScore2 += 1
-                                    print(termcolor2.colored("===========","red"))
-                                    print(termcolor2.colored(f"{player_name1}: {playerScore1}","yellow"))
-                                    print(termcolor2.colored(f"{player_name2}: {playerScore2}","yellow"))
-                                    print(termcolor2.colored("==========================\n","red","on_white"))
+                                    print(colored("===========","red"))
+                                    print(colored(f"{player_name1}: {playerScore1}","yellow"))
+                                    print(colored(f"{player_name2}: {playerScore2}","yellow"))
+                                    print(colored("==========================
+","red","on_white"))
                                 c -= 1
                                 f -= 1     
                             elif playerMove1 == "paper":
                                 if playerMove2 == "rock":
-                                    print(termcolor2.colored(f"Winner: {player_name1}","green"))
+                                    print(colored(f"Winner: {player_name1}","green"))
                                     playerScore1 += 1
-                                    print(termcolor2.colored("===========","red"))
-                                    print(termcolor2.colored(f"{player_name1}: {playerScore1}","yellow"))
-                                    print(termcolor2.colored(f"{player_name2}: {playerScore2}","yellow"))
-                                    print(termcolor2.colored("==========================\n","red","on_white"))
+                                    print(colored("===========","red"))
+                                    print(colored(f"{player_name1}: {playerScore1}","yellow"))
+                                    print(colored(f"{player_name2}: {playerScore2}","yellow"))
+                                    print(colored("==========================
+","red","on_white"))
                                     
                                 elif playerMove2 == "scissor":
-                                    print(termcolor2.colored(f"Winner: {player_name2}","green"))
+                                    print(colored(f"Winner: {player_name2}","green"))
                                     playerScore2 += 1
-                                    print(termcolor2.colored("===========","red"))
-                                    print(termcolor2.colored(f"{player_name1}: {playerScore1}","yellow"))
-                                    print(termcolor2.colored(f"{player_name2}: {playerScore2}","yellow"))
-                                    print(termcolor2.colored("==========================\n","red","on_white"))
+                                    print(colored("===========","red"))
+                                    print(colored(f"{player_name1}: {playerScore1}","yellow"))
+                                    print(colored(f"{player_name2}: {playerScore2}","yellow"))
+                                    print(colored("==========================
+","red","on_white"))
                                 c -= 1
                                 f -= 1    
                     except:
-                        print(termcolor2.colored("ٍError!","red","on_white",attrs=["bold"]))
+                        print(colored("ٍError!","red","on_white",attrs=["bold"]))
                     b += 1
                 elif first_input == "1":
                     b += 1
                 else:
-                    print(termcolor2.colored("Try again!","red","on_white"))
+                    print(colored("Try again!","red","on_white"))
         except:
             pass
 
         if first_input == "1":
-            player_name = input("\n>>> What is your name? ")
+            player_name = input("
+>>> What is your name? ")
             computerScore = 0
             playerScore = 0
 
@@ -771,7 +863,11 @@ while a < 1:
                         computerMove = "scissor"
                     d = 0
                     while d < 1:
-                        print(termcolor2.colored("\n[1] Rock\n[2] Scissor\n[3] Paper\n[0] Back","magenta"))
+                        print(colored("
+[1] Rock
+[2] Scissor
+[3] Paper
+[0] Back","magenta"))
                         playerMove1 = input(">>> Choose: ")
                         if playerMove1 == "1":
                             playerMove = "rock".lower()
@@ -786,90 +882,91 @@ while a < 1:
                             playerMove = "0"
                             d += 1
                         else:
-                            print(termcolor2.colored("ٍError!","red","on_white",attrs=["bold"]))
-                            print(termcolor2.colored("==========================\n","red","on_white"))
+                            print(colored("ٍError!","red","on_white",attrs=["bold"]))
+                            print(colored("==========================","red","on_white"))
                             
                     if computerMove == playerMove:
-                        print(termcolor2.colored(f"\nComputer move: {computerMove}","blue"))
-                        print(termcolor2.colored("Draw!","green"))
-                        print(termcolor2.colored("===========","red"))
-                        print(termcolor2.colored(f"Player score: {playerScore}","yellow"))
-                        print(termcolor2.colored(f"Computer score: {computerScore}","yellow"))
-                        print(termcolor2.colored("==========================\n","red","on_white"))
+                        print(colored(f"Computer move: {computerMove}","blue"))
+                        print(colored("Draw!","green"))
+                        print(colored("===========","red"))
+                        print(colored(f"Player score: {playerScore}","yellow"))
+                        print(colored(f"Computer score: {computerScore}","yellow"))
+                        print(colored("==========================","red","on_white"))
                     
                     elif playerMove == "rock":
                         if computerMove == "paper":
-                            print(termcolor2.colored(f"\nComputer move: {computerMove}","blue"))
-                            print(termcolor2.colored(f"Winner: Computer","green"))
+                            print(colored(f"Computer move: {computerMove}","blue"))
+                            print(colored(f"Winner: Computer","green"))
                             computerScore+=1
-                            print(termcolor2.colored("===========","red"))
-                            print(termcolor2.colored(f"Player score: {playerScore}","yellow"))
-                            print(termcolor2.colored(f"Computer score: {computerScore}","yellow"))
-                            print(termcolor2.colored("==========================\n","red","on_white"))
+                            print(colored("===========","red"))
+                            print(colored(f"Player score: {playerScore}","yellow"))
+                            print(colored(f"Computer score: {computerScore}","yellow"))
+                            print(colored("==========================","red","on_white"))
                         elif computerMove == "scissor":
-                            print(termcolor2.colored(f"\nComputer move: {computerMove}","blue"))
-                            print(termcolor2.colored(f"Winner: {player_name}","green"))
+                            print(colored(f"Computer move: {computerMove}","blue"))
+                            print(colored(f"Winner: {player_name}","green"))
                             playerScore+=1
-                            print(termcolor2.colored("===========","red"))
-                            print(termcolor2.colored(f"Player score: {playerScore}","yellow"))
-                            print(termcolor2.colored(f"Computer score: {computerScore}","yellow"))
-                            print(termcolor2.colored("==========================\n","red","on_white"))
+                            print(colored("===========","red"))
+                            print(colored(f"Player score: {playerScore}","yellow"))
+                            print(colored(f"Computer score: {computerScore}","yellow"))
+                            print(colored("==========================","red","on_white"))
 
                     elif playerMove == "scissor":
                         if computerMove == "paper":
-                            print(termcolor2.colored(f"\nComputer move: {computerMove}","blue"))
-                            print(termcolor2.colored(f"Winner: Computer","green"))
+                            print(colored(f"
+Computer move: {computerMove}","blue"))
+                            print(colored(f"Winner: Computer","green"))
                             playerScore+=1
-                            print(termcolor2.colored("===========","red"))
-                            print(termcolor2.colored(f"Player score: {playerScore}","yellow"))
-                            print(termcolor2.colored(f"Computer score: {computerScore}","yellow"))
-                            print(termcolor2.colored("==========================\n","red","on_white"))
+                            print(colored("===========","red"))
+                            print(colored(f"Player score: {playerScore}","yellow"))
+                            print(colored(f"Computer score: {computerScore}","yellow"))
+                            print(colored("==========================","red","on_white"))
                         elif computerMove == "rock":
-                            print(termcolor2.colored(f"\nComputer move: {computerMove}","blue"))
-                            print(termcolor2.colored(f"Winner: {player_name}","green"))
+                            print(colored(f"Computer move: {computerMove}","blue"))
+                            print(colored(f"Winner: {player_name}","green"))
                             computerScore+=1
-                            print(termcolor2.colored("===========","red"))
-                            print(termcolor2.colored(f"Player score: {playerScore}","yellow"))
-                            print(termcolor2.colored(f"Computer score: {computerScore}","yellow"))
-                            print(termcolor2.colored("==========================\n","red","on_white"))
+                            print(colored("===========","red"))
+                            print(colored(f"Player score: {playerScore}","yellow"))
+                            print(colored(f"Computer score: {computerScore}","yellow"))
+                            print(colored("==========================","red","on_white"))
 
                     elif playerMove == "paper":
                         if computerMove == "rock":
-                            print(termcolor2.colored(f"\nComputer move: {computerMove}","blue"))
-                            print(termcolor2.colored(f"Winner: Computer","green"))
+                            print(colored(f"Computer move: {computerMove}","blue"))
+                            print(colored(f"Winner: Computer","green"))
                             playerScore+=1
-                            print(termcolor2.colored("===========","red"))
-                            print(termcolor2.colored(f"Player score: {playerScore}","yellow"))
-                            print(termcolor2.colored(f"Computer score: {computerScore}","yellow"))
-                            print(termcolor2.colored("==========================\n","red","on_white"))
+                            print(colored("===========","red"))
+                            print(colored(f"Player score: {playerScore}","yellow"))
+                            print(colored(f"Computer score: {computerScore}","yellow"))
+                            print(colored("==========================","red","on_white"))
                         elif computerMove == "scissor":
-                            print(termcolor2.colored(f"\nComputer move: {computerMove}","blue"))
-                            print(termcolor2.colored(f"Winner: {player_name}","green"))
+                            print(colored(f"Computer move: {computerMove}","blue"))
+                            print(colored(f"Winner: {player_name}","green"))
                             computerScore+=1
-                            print(termcolor2.colored("===========","red"))
-                            print(termcolor2.colored(f"Player score: {playerScore}","yellow"))
-                            print(termcolor2.colored(f"Computer score: {computerScore}","yellow"))
-                            print(termcolor2.colored("==========================\n","red","on_white"))
+                            print(colored("===========","red"))
+                            print(colored(f"Player score: {playerScore}","yellow"))
+                            print(colored(f"Computer score: {computerScore}","yellow"))
+                            print(colored("==========================","red","on_white"))
                     elif playerMove == "0":
                         p += 1
                     else:
-                        print(termcolor2.colored("ٍError!","red","on_white",attrs=["bold"]))
-                        print(termcolor2.colored("==========================\n","red","on_white"))
+                        print(colored("ٍError!","red","on_white",attrs=["bold"]))
+                        print(colored("==========================","red","on_white"))
             except:
-                print(termcolor2.colored("ٍError!","red","on_white",attrs=["bold"]))
+                print(colored("ٍError!","red","on_white",attrs=["bold"]))
     elif firstQ == "5":
         import random
 
-        print(termcolor2.colored("\nGuess number\n","yellow"))
+        print(colored("Guess number","yellow"))
 
         a = 0 
         while a < 1:
             b = 0
             while b < 1:
                 try:
-                    distanceS = int(input("\n>>> From what number start: "))
+                    distanceS = int(input(">>> From what number start: "))
                 except:
-                    print(termcolor2.colored("Try again!\n","red","on_white"))
+                    print(colored("Try again!","red","on_white"))
                 else:
                     b += 1
             c = 0
@@ -877,7 +974,7 @@ while a < 1:
                 try:
                     distanceF = int(input(">>> Till what number finish: "))
                 except:
-                    print(termcolor2.colored("Try again!\n","red","on_white"))
+                    print(colored("Try again!","red","on_white"))
                 else:
                     c += 1
             if distanceF < distanceS:
@@ -887,41 +984,41 @@ while a < 1:
             d = 0
             while d < 1:
                 try:
-                    print(termcolor2.colored("\n[Start number - 1] Quit","magenta"))
-                    guess = int(input("\n>>> Enter your guess: "))
+                    print(colored("[Start number - 1] Quit","magenta"))
+                    guess = int(input(">>> Enter your guess: "))
                 except:
-                    print(termcolor2.colored("Try again!\n","red","on_white"))
+                    print(colored("Try again!","red","on_white"))
                 else:
                     if guess == computerNum:
-                            print(termcolor2.colored(f"Well done! your number was: {computerNum}","green"))
-                            print(termcolor2.colored("===============\n","red"))
+                            print(colored(f"Well done! your number was: {computerNum}","green"))
+                            print(colored("===============","red"))
                             d += 1
                     elif guess == (distanceS - 1):
                             d += 1
                             a += 1
                     elif guess < computerNum:
-                            print(termcolor2.colored(f"It is higher than {guess}","blue"))
-                            print(termcolor2.colored("===============\n","red"))
+                            print(colored(f"It is higher than {guess}","blue"))
+                            print(colored("===============","red"))
                     elif guess > computerNum:
-                            print(termcolor2.colored(f"It is lower than {guess}","blue"))
-                            print(termcolor2.colored("===============\n","red"))
+                            print(colored(f"It is lower than {guess}","blue"))
+                            print(colored("===============","red"))
             if guess != (distanceS - 1):
                 f = 0
                 while f < 1:
-                    exit = input("\n>>> DO you want to exit?y/n: ")
+                    exit = input(">>> DO you want to exit?y/n: ")
                     if exit == "y":
                             f += 1
                             a += 1
                     elif exit == "n":
                             f += 1
                     else:
-                            print(termcolor2.colored("Try again!\n","red","on_white"))
+                            print(colored("Try again!","red","on_white"))
 
         a = 0;b = 0;c = 0;d = 0;f = 0
     elif firstQ == "6":
         from text_to_speech import speak
 
-        print(termcolor2.colored("\n\nText to Speech\n\n","yellow"))
+        print(colored("Text to Speech","yellow"))
         # ============== functions ==============
 
         def searchEn():
@@ -930,7 +1027,7 @@ while a < 1:
             while w < 1:
                 save = input(">>> DO you want save it? y/n: ")
                 if save == "y":
-                    speak("hello", lang="en", slow=True, save=True, file=r"Desktop\filename .mp3")
+                    speak("hello", lang="en", slow=True, save=True, file=r"Desktopilename .mp3")
                     w += 1
                 elif save == "n":
                     speak(text, lang="en", slow=True)
@@ -944,7 +1041,7 @@ while a < 1:
             while w < 1:
                 save = input(">>> DO you want save it? y/n: ")
                 if save == "y":
-                    speak("hello", lang="ja", slow=True, save=True, file=r"Desktop\filename .mp3")
+                    speak("hello", lang="ja", slow=True, save=True, file=r"Desktopilename .mp3")
                     w += 1
                 elif save == "n":
                     speak(text, lang="ja", slow=True)
@@ -958,7 +1055,7 @@ while a < 1:
             while w < 1:
                 save = input(">>> DO you want save it? y/n: ")
                 if save == "y":
-                    speak("hello", lang="ar", slow=True, save=True, file=r"Desktop\filename .mp3")
+                    speak("hello", lang="ar", slow=True, save=True, file=r"Desktopilename .mp3")
                     w += 1
                 elif save == "n":
                     speak(text, lang="ar", slow=True)
@@ -972,7 +1069,7 @@ while a < 1:
             while w < 1:
                 save = input(">>> DO you want save it? y/n: ")
                 if save == "y":
-                    speak("hello", lang="fr", slow=True, save=True, file=r"Desktop\filename .mp3")
+                    speak("hello", lang="fr", slow=True, save=True, file=r"Desktopilename .mp3")
                     w += 1
                 elif save == "n":
                     speak(text, lang="fr", slow=True)
@@ -986,7 +1083,7 @@ while a < 1:
             while w < 1:
                 save = input(">>> DO you want save it? y/n: ")
                 if save == "y":
-                    speak("hello", lang="de", slow=True, save=True, file=r"Desktop\filename .mp3")
+                    speak("hello", lang="de", slow=True, save=True, file=r"Desktopilename .mp3")
                     w += 1
                 elif save == "n":
                     speak(text, lang="de", slow=True)
@@ -1000,7 +1097,7 @@ while a < 1:
             while w < 1:
                 save = input(">>> DO you want save it? y/n: ")
                 if save == "y":
-                    speak("hello", lang="zh", slow=True, save=True, file=r"Desktop\filename .mp3")
+                    speak("hello", lang="zh", slow=True, save=True, file=r"Desktopilename .mp3")
                     w += 1
                 elif save == "n":
                     speak(text, lang="zh", slow=True)
@@ -1014,7 +1111,7 @@ while a < 1:
             while w < 1:
                 save = input(">>> DO you want save it? y/n: ")
                 if save == "y":
-                    speak("hello", lang="ru", slow=True, save=True, file=r"Desktop\filename .mp3")
+                    speak("hello", lang="ru", slow=True, save=True, file=r"Desktopilename .mp3")
                     w += 1
                 elif save == "n":
                     speak(text, lang="ru", slow=True)
@@ -1028,7 +1125,7 @@ while a < 1:
             while w < 1:
                 save = input(">>> DO you want save it? y/n: ")
                 if save == "y":
-                    speak("hello", lang="es", slow=True, save=True, file=r"Desktop\filename .mp3")
+                    speak("hello", lang="es", slow=True, save=True, file=r"Desktopilename .mp3")
                     w += 1
                 elif save == "n":
                     speak(text, lang="es", slow=True)
@@ -1038,14 +1135,14 @@ while a < 1:
 
         # ============= inputs and texts =============
 
-        print(termcolor2.colored("[1] English","magenta"))
-        print(termcolor2.colored("[2] Japanese","magenta"))
-        print(termcolor2.colored("[3] Arabic","magenta"))
-        print(termcolor2.colored("[4] French","magenta"))
-        print(termcolor2.colored("[5] German","magenta"))
-        print(termcolor2.colored("[6] Chinese","magenta"))
-        print(termcolor2.colored("[7] Russian","magenta"))
-        print(termcolor2.colored("[8] Spanish","magenta"))
+        print(colored("[1] English","magenta"))
+        print(colored("[2] Japanese","magenta"))
+        print(colored("[3] Arabic","magenta"))
+        print(colored("[4] French","magenta"))
+        print(colored("[5] German","magenta"))
+        print(colored("[6] Chinese","magenta"))
+        print(colored("[7] Russian","magenta"))
+        print(colored("[8] Spanish","magenta"))
         searchLang = input(">>> Enter language of your search: ")
 
         # ============= if =============
@@ -1093,17 +1190,17 @@ while a < 1:
     elif firstQ == "7":
         import os
 
-        print(termcolor2.colored("\n\nShut Down","yellow"))
+        print(colored("Shut Down","yellow"))
 
         try:
             a = 0
             while a < 1:
                 b = 0
-                print(termcolor2.colored("\n[1] Shut Down","magenta"))
-                print(termcolor2.colored("[2] Restart","magenta"))
-                print(termcolor2.colored("[0] Quit","magenta"))
+                print(colored("[1] Shut Down","magenta"))
+                print(colored("[2] Restart","magenta"))
+                print(colored("[0] Quit","magenta"))
                 while b < 1:
-                    firstInput = input("\n>>> Choose: ")
+                    firstInput = input(">>> Choose: ")
                     if firstInput == "1":
                         os.system('shutdown -s')
                         b += 1
@@ -1114,22 +1211,23 @@ while a < 1:
                         b += 1
                         a += 1
                     else:
-                        print(termcolor2.colored("Try again","red","on_white"))
+                        print(colored("Try again","red","on_white"))
         except:
-            print(termcolor2.colored("Error","red","on_white"))
+            print(colored("Error","red","on_white"))
     elif firstQ == "8":
         import ctypes
-        print(termcolor2.colored("\n\nBackground Changer","yellow"))\
+        print(colored("
 
+Background Changer","yellow"))
         def change_wallpaper():
             try:
                 n = 0
                 while n < 1:
-                    address = input("\n>>> Enter address of your image: ")
+                    address = input(">>> Enter address of your image: ")
                     value = ctypes.windll.user32.SystemParametersInfoW(20,0,address)
-                    print(termcolor2.colored("Background Changed!\n","blue"))
-                    print(termcolor2.colored("[1] Change again","magenta"))
-                    print(termcolor2.colored("[0] Quit\n","magenta"))
+                    print(colored("Background Changed!","blue"))
+                    print(colored("[1] Change again","magenta"))
+                    print(colored("[0] Quit","magenta"))
                     m = 0
                     while m < 1:
                         secondInput = input(">>> Choose: ")
@@ -1139,11 +1237,11 @@ while a < 1:
                             m += 1
                             n += 1
                         else:
-                            print(termcolor2.colored("ٍError!","red","on_white",attrs=["bold"]))
+                            print(colored("ٍError!","red","on_white",attrs=["bold"]))
                 n -= 1
                 m -= 1
             except:
-                print(termcolor2.colored("ٍError!","red","on_white",attrs=["bold"]))
+                print(colored("ٍError!","red","on_white",attrs=["bold"]))
         change_wallpaper()
     elif firstQ == "0":
         a += 1
