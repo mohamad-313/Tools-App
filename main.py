@@ -1,11 +1,9 @@
-import pyfiglet
+from pyfiglet import figlet_format
 from termcolor2 import colored
 
-# ============= functions =============
 
 # ============= labels =============
-
-name = pyfiglet.figlet_format("Tool App")
+name = figlet_format("Tool App")
 print(colored(name,"red"))
 
 by = "By: Mohammad Shokouhian"
@@ -15,158 +13,39 @@ print(colored(by,"green",attrs=["bold","underline"]))
 
 a = 0
 while a < 1:
-    print(colored("
-[1] Caculator","magenta"))
-    print(colored("[2] Time tool","magenta"))
-    print(colored("[3] Wikipedia Search","magenta"))
-    print(colored("[4] Rock-Scissor-Paper","magenta"))
-    print(colored("[5] Guess Number","magenta"))
-    print(colored("[6] Text to Speech","magenta"))
-    print(colored("[7] Shut down","magenta"))
-    print(colored("[8] Backgroud Changer","magenta"))
-    print(colored("[0] Quit
-","magenta"))
+    coloredMagenta = lambda x:colored(x,"magenta")
+    print(coloredMagenta("[1] Caculator"))
+    print(coloredMagenta("[2] Time tool"))
+    print(coloredMagenta("[3] Wikipedia Search"))
+    print(coloredMagenta("[4] Rock-Scissor-Paper"))
+    print(coloredMagenta("[5] Guess Number"))
+    print(coloredMagenta("[6] Text to Speech"))
+    print(coloredMagenta("[7] Shut down"))
+    print(coloredMagenta("[8] Backgroud Changer"))
+    print(coloredMagenta("[0] Quit"))
     firstQ = input(">>> What would you like to do: ")
     
     if firstQ == "1":
-        import math
-        # ============= functions(calculator) =============
-        def plus(x,y):
-            result = x + y
-            res = colored(result,"red")
-            print(f"{x} + {y} = {res}")
-            
-        def minus(x,y):
-            result = x - y
-            res = colored(result,"red")
-            print(f"{x} - {y} = {res}")
+        
+        while True:
+         from math import sqrt,tan
+         print(colored("For calculate tangent of x enter "))
+         inp = input("Calculator >>>")  
+        
+         try:
+            if inp == "0": break
+            if inp == "": continue
+         except:
+            print(colored("ٍError!","red","on_white",attrs=["bold"]))
 
-        def multy(x,y):
-            result = x * y
-            res = colored(result,"red")
-            print(f"{x} × {y} =  {res}")
-
-        def dev(x,y):
-            result = x / y
-            res = colored(result,"red")
-            print(f"{x} ÷ {y} = {res}")
-
-        def sqrtfunc(x):
-            result = math.sqrt(x)
-            res = colored(result,"red")
-            print(f"Result is: {res}")
-
-        def tavan(x,y):
-            result = x ** y
-            res = colored(result,"red")
-            print(f"{x} ^ {y} = {res}")
-
-        def tangent(x):
-            result = math.tan(x)
-            res = colored(result,"red")
-            print(f"tangent of {x} = {res}")
-
-        # ============= run func =============
-
-        def runcalc():
-            colored("
-
-Calculator","yellow")
-            a = 0
-            while a < 1:
-                try:
-                    OneTwo = "
-[1] + 	 [2] -"
-                    print(colored(OneTwo,"magenta"))
-                    ThreeFour = "[3] × 	 [4] ÷"
-                    print(colored(ThreeFour,"magenta"))
-                    five = "[5] sqrt"
-                    print(colored(five,"magenta"))
-                    six = "[6] forse"
-                    print(colored(six,"magenta"))
-                    seven = "[7] factorial"
-                    print(colored(seven,"magenta"))
-                    eight = ("[8] tangent")
-                    print(colored(eight,"magenta"))
-                    tryAgain = "Try again!"
-                    zero = "[0] Quit!"
-                    print(colored(zero,"magenta"))
-
-                    z = 0
-                    while z < 1:
-                        solve = input("
->>> What do you want to do? ")
-                        if solve == "1":
-                            first_num = int(input(">>> first number: "))
-                            second_num = int(input(">>> second number: "))
-                            plus(first_num,second_num)
-                            z += 1
-                                
-                        elif solve == "2":
-                            first_num = int(input(">>> first number: "))
-                            second_num = int(input(">>> second number: "))
-                            minus(first_num,second_num)
-                            z += 1
-
-                        elif solve == "3":
-                            first_num = int(input(">>> first number: "))
-                            second_num = int(input(">>> second number: "))
-                            multy(first_num,second_num)
-                            z += 1
-
-                        elif solve == "4":
-                            first_num = int(input(">>> first number: "))
-                            second_num = int(input(">>> second number: "))
-                            dev(first_num,second_num)
-                            z += 1
-
-                        elif solve == "5":
-                            num = int(input(">>> number: "))
-                            sqrtfunc(num)
-                            z += 1
-
-                        elif solve == "6":
-                            first_num = int(input(">>> first number: "))
-                            second_num = int(input(">>> second number: "))
-                            tavan(first_num,second_num)
-                            z += 1
-
-                        elif solve == "7":
-                            num = int(input(">>> number: "))
-                            a = 1
-                            x = num
-                            for i in range(1,x+1):
-                                a = a * i
-                            print(f"factorial of {x} is {a}")
-                            z += 1
-                        
-                        elif solve == "8":
-                            num = int(input(">>> number: "))
-                            tangent(num)
-                            z += 1
-
-                        elif solve == "0":
-                            z += 1
-                            a += 1
-                        else:
-                            print(colored(tryAgain,"red","on_white",attrs=["bold"]))
-                    z -= 1
-                except:
-                    print(colored("ٍError!","red","on_white",attrs=["bold"]))
-            a -= 1
-        runcalc()
     elif firstQ == "2":
         import time 
         from jdatetime import JalaliToGregorian
         import datetime as dt
         # import termcolor2
 
-        print(colored("
-Time Tool
+        print(colored("Time Tool","yellow"))
 
-","yellow"))
-
-        # ============= variables =============
 
         todayMiladi = time.localtime()
         year = todayMiladi[0]
@@ -182,114 +61,88 @@ Time Tool
 
         def animalshamsi(year):
             trueYear = year - 7
+            animal = {0 : "<Mouse>", 1 : "<Cow>", 2 : "<Tiger>", 3 : "<Rabbit>", 4 : "<Dragon>", 5 : "<Snake>", 6 : "<Hourse>", 7 : "<Goat>", 8 : "<Monkey>", 9;}
             if trueYear % 12 == 0:
                 print(colored("your birth year is : <Mouse>","green"))
-                print(colored("================
-","red"))
+                print(colored("================","red"))
             elif trueYear % 12 == 1:
                 print(colored("your birth year is : <Cow>","green"))
-                print(colored("================
-","red"))
+                print(colored("================","red"))
             elif trueYear % 12 == 2:
                 print(colored("your birth year is : <Tiger>","green"))
-                print(colored("================
-","red"))
+                print(colored("================","red"))
             elif trueYear % 12 == 3:
                 print(colored("your birth year is : <Rabbit>","green"))
-                print(colored("================
-","red"))
+                print(colored("================","red"))
             elif trueYear % 12 == 4:
                 print(colored("your birth year is : <Dragon>","green"))
-                print(colored("================
-","red"))
+                print(colored("================","red"))
             elif trueYear % 12 == 5:
                 print(colored("your birth year is : <Snake>","green"))
-                print(colored("================
-","red"))
+                print(colored("================","red"))
             elif trueYear % 12 == 6:
                 print(colored("your birth year is : <Houre>","green"))
-                print(colored("================
-","red"))
+                print(colored("================","red"))
             elif trueYear % 12 == 7:
                 print(colored("your birth year is : <Goat>","green"))
-                print(colored("================
-","red"))
+                print(colored("================","red"))
             elif trueYear % 12 == 8:
                 print(colored("your birth year is : <Monkey>","green"))
-                print(colored("================
-","red"))
+                print(colored("================","red"))
             elif trueYear % 12 == 9:
                 print(colored("your birth year is : <Rooster>","green"))
-                print(colored("================
-","red"))
+                print(colored("================","red"))
             elif trueYear % 12 == 10:
                 print(colored("your birth year is : <Dog>","green"))
-                print(colored("================
-","red"))
+                print(colored("================","red"))
             elif trueYear % 12 == 11:
                 print(colored("your birth year is : <Pig>","green"))
-                print(colored("================
-","red"))
+                print(colored("================","red"))
 
         def animalmiladi(year):
             trueYear = year - 4
             if trueYear % 12 == 0:
                 print(colored("your birth year is : <Mouse>","green"))
-                print(colored("================
-","red"))
+                print(colored("================","red"))
             elif trueYear % 12 == 1:
                 print(colored("your birth year is : <Cow>","green"))
-                print(colored("================
-","red"))
+                print(colored("================","red"))
             elif trueYear % 12 == 2:
                 print(colored("your birth year is : <Tiger>","green"))
-                print(colored("================
-","red"))
+                print(colored("================","red"))
             elif trueYear % 12 == 3:
                 print(colored("your birth year is : <Rabbit>","green"))
-                print(colored("================
-","red"))
+                print(colored("================","red"))
             elif trueYear % 12 == 4:
                 print(colored("your birth year is : <Dragon>","green"))
-                print(colored("================
-","red"))
+                print(colored("================","red"))
             elif trueYear % 12 == 5:
                 print(colored("your birth year is : <Snake>","green"))
-                print(colored("================
-","red"))
+                print(colored("================","red"))
             elif trueYear % 12 == 6:
                 print(colored("your birth year is : <Houre>","green"))
-                print(colored("================
-","red"))
+                print(colored("================","red"))
             elif trueYear % 12 == 7:
                 print(colored("your birth year is : <Goat>","green"))
-                print(colored("================
-","red"))
+                print(colored("================","red"))
             elif trueYear % 12 == 8:
                 print(colored("your birth year is : <Monkey>","green"))
-                print(colored("================
-","red"))
+                print(colored("================","red"))
             elif trueYear % 12 == 9:
                 print(colored("your birth year is : <Rooster>","green"))
-                print(colored("================
-","red"))
+                print(colored("================","red"))
             elif trueYear % 12 == 10:
                 print(colored("your birth year is : <Dog>","green"))
-                print(colored("================
-","red"))
+                print(colored("================","red"))
             elif trueYear % 12 == 11:
                 print(colored("your birth year is : <Pig>","green"))
-                print(colored("================
-","red"))
+                print(colored("================","red"))
 
         def todayMiladifunc():
-            print(colored("
-Gregorian date:","yellow"))
+            print(colored("Gregorian date:","yellow"))
             print(colored(f"{year}/{month}/{day}","green"))
-            print(colored(f"
-{hour} : {minute} : {second}","blue"))
-            print(colored(f"{dayOfYear} days from {year}
-","green"))
+            print(colored(f"{hour} : {minute} : {second}","blue"))
+            print(colored(f"{dayOfYear} days from {year}","green"))
 
         def gLeapYear(y):
             if (y%4==0) and ((y%100!=0) or (y%400==0)):
@@ -349,29 +202,21 @@ Gregorian date:","yellow"))
                     sm = int(gd/30) + 10 
             # result = [sy, sm, sd]
             # return result
-            print(colored("
-today is:","yellow"))
+            print(colored("today is:","yellow"))
             if dayOfWeek == 0:
-                print(colored("Monday
-","blue"))
+                print(colored("Monday","blue"))
             elif dayOfWeek == 1:
-                print(colored("Tuesday
-","blue"))
+                print(colored("Tuesday","blue"))
             elif dayOfWeek == 2:
-                print(colored("Wednesday
-","blue"))
+                print(colored("Wednesday","blue"))
             elif dayOfWeek == 3:
-                print(colored("Thursday
-","blue"))
+                print(colored("Thursday","blue"))
             elif dayOfWeek == 4:
-                print(colored("Friday
-","blue"))
+                print(colored("Friday","blue"))
             elif dayOfWeek == 5:
-                print(colored("Saturday
-","blue"))
+                print(colored("Saturday","blue"))
             elif dayOfWeek == 6:
-                print(colored("Sunday
-","blue"))
+                print(colored("Sunday","blue"))
             print(colored("Shamsi date:","yellow"))
             print(colored(f"{sd}/{sm}/{sy}","green"))
 
@@ -419,10 +264,7 @@ today is:","yellow"))
                     sm = int(gd/30) + 10 
             # result = [sy, sm, sd]
             # return result
-            print(colored(f"
-Result: 
-{sd}/{sm}/{sy}
-","green"))
+            print(colored(f"Result:\n{sd}/{sm}/{sy}","green"))
 
         def shamsiToMiladi(gyear, gmonth, gday):
             gregorian_date_obj = JalaliToGregorian(gyear,gmonth,gday)
@@ -513,13 +355,13 @@ It's been {} days from birthday!'.format(days_life),"green"))
 
         # ============= inputs and texts(time) =============
 
-        print(colored("[1] Animal of birth (Miladi)","magenta"))
-        print(colored("[2] Animal of birth (Shamsi)","magenta"))
-        print(colored("[3] Today","magenta"))
-        print(colored("[4] Miladi to Shamsi","magenta"))
-        print(colored("[5] Shamsi to Miladi","magenta"))
-        print(colored("[6] Days of life (Miladi)","magenta"))
-        print(colored("[7] Days of life (Shamsi)","magenta"))
+        print(colored("[1] Animal of birth (Miladi)"))
+        print(colored("[2] Animal of birth (Shamsi)"))
+        print(colored("[3] Today"))
+        print(colored("[4] Miladi to Shamsi"))
+        print(colored("[5] Shamsi to Miladi"))
+        print(colored("[6] Days of life (Miladi)"))
+        print(colored("[7] Days of life (Shamsi)"))
         work = input(">>> what do you want to do? ")
 
         # ============= if(time) =============
@@ -685,7 +527,7 @@ Rock Scissor Paper","yellow"))
 [1] Computer 
 [2] Player 2
 "
-        print(colored(OneTwo,"magenta"))
+        print(colored(OneTwo))
         b = 0
         try:
             while b < 1:
@@ -710,7 +552,7 @@ Rock Scissor Paper","yellow"))
 [1] Rock
 [2] Scissor
 [3] Paper
-[0] Back","magenta"))
+[0] Back"))
                                 playerMove1 = input(f">>> {player_name1}! Choose: ")
                                 if playerMove1 == "1":
                                     playerMove1 = "rock".lower()
@@ -741,7 +583,7 @@ Rock Scissor Paper","yellow"))
 [1] Rock
 [2] Scissor
 [3] Paper
-[0] Back","magenta"))
+[0] Back"))
                                 playerMove2 = input(f">>> {player_name2}! Choose: ")
                                 if playerMove2 == "1":
                                     playerMove2 = "rock".lower()
@@ -867,7 +709,7 @@ Rock Scissor Paper","yellow"))
 [1] Rock
 [2] Scissor
 [3] Paper
-[0] Back","magenta"))
+[0] Back"))
                         playerMove1 = input(">>> Choose: ")
                         if playerMove1 == "1":
                             playerMove = "rock".lower()
